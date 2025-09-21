@@ -21,10 +21,6 @@ public class DemoViewer {
         JSlider sideSlider = new JSlider(SwingConstants.VERTICAL, -90, 90, 0);
         pane.add(sideSlider, BorderLayout.EAST);
 
-        // Slider shader
-        JSlider shaderSlider = new JSlider(SwingConstants.VERTICAL, -90, 90, 0);
-        pane.add(shaderSlider, BorderLayout.WEST);
-
         // Slider inflate
         JSlider inflateSlider = new JSlider(0, 10, 0);
         pane.add(inflateSlider, BorderLayout.SOUTH);
@@ -187,7 +183,6 @@ public class DemoViewer {
         // Listeners
         topSlider.addChangeListener(e -> renderPanel.repaint());
         sideSlider.addChangeListener(e -> renderPanel.repaint());
-        shaderSlider.addChangeListener(e -> renderPanel.repaint());
         inflateSlider.addChangeListener(e -> renderPanel.repaint());
 
         pane.add(renderPanel, BorderLayout.CENTER);
